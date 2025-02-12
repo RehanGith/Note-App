@@ -8,9 +8,8 @@ import com.example.noteapp.Database.NoteDatabase
 import com.example.noteapp.Repository.NoteRepo
 import kotlinx.coroutines.launch
 
-class NoteViewModel(private val app : Application, private val repo : NoteRepo,
-                    application: Application
-): AndroidViewModel(application) {
+class NoteViewModel(private val app : Application, private val repo : NoteRepo
+): AndroidViewModel(app) {
     fun deleteNote(note: Note) {
         viewModelScope.launch {
             repo.delete(note)
