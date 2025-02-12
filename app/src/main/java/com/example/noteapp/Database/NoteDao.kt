@@ -8,18 +8,18 @@ import androidx.room.Query
 import androidx.room.Update
 
 @Dao
-interface Dao {
+interface NoteDao {
 
     @Insert
-    fun insertNote(note: Note)
+    suspend fun insertNote(note: Note)
 
     @Update
-    fun updateNote(note: Note)
+    suspend fun updateNote(note: Note)
 
     @Delete
-    fun deleteNote(note: Note)
+    suspend fun deleteNote(note: Note)
 
     @Query("SELECT * FROM note")
-    fun getAllNotes(): LiveData<List<Note>>
+    suspend fun getAllNotes(): LiveData<List<Note>>
 
 }
