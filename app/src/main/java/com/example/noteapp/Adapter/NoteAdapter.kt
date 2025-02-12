@@ -7,7 +7,8 @@ import com.example.noteapp.databinding.NoteLayoutBinding
 class NoteAdapter: RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     class NoteViewHolder(binding: NoteLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val title = binding.noteTitle
-        val content = binding.
+        val content = binding.noteDesc
+        val deleteButton = binding.btnDelete
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
