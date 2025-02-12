@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.noteapp.Adapter.NoteAdapter
 import com.example.noteapp.Database.Note
@@ -39,7 +39,7 @@ class HomeFragment : Fragment(), NoteAdapter.OnNoteClickListener {
         super.onViewCreated(view, savedInstanceState)
         noteViewModel = (activity as MainActivity).noteViewModel
         binding.addNoteFab.setOnClickListener {
-            it.findNavController().navigate(R.id.action_homeFragment_to_addNote)
+            findNavController().navigate(R.id.action_homeFragment_to_addNote)
         }
     }
 

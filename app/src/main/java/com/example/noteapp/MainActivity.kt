@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setUpViewModel()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragmentContainerView, HomeFragment())
         transaction.commit()
     }
-    fun setUpViewModel() {
+    private fun setUpViewModel() {
         val repo = NoteRepo(NoteDatabase(this))
         val viewModelFactory = ViewModelFactory(application, repo)
         noteViewModel = ViewModelProvider(this, viewModelFactory)[NoteViewModel::class.java]
