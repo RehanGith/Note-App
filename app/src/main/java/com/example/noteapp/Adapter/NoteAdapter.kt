@@ -34,7 +34,7 @@ class NoteAdapter(private val listener: OnNoteClickListener): RecyclerView.Adapt
 
 
     }
-    private val differ = AsyncListDiffer(this, differCallBack)
+    val differ = AsyncListDiffer(this, differCallBack)
 
     override fun getItemCount(): Int {
         return differ.currentList.size

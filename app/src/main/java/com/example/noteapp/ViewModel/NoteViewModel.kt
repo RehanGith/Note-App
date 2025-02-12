@@ -25,9 +25,6 @@ class NoteViewModel(private val app : Application, private val repo : NoteRepo
             repo.insert(note)
         }
     }
-    fun getAllNotes() {
-        viewModelScope.launch {
+    fun getAllNotes() =
             repo.getAllNotes()
-        }
-    }
 }

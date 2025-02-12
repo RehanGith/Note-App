@@ -8,7 +8,7 @@ class NoteRepo(val db: NoteDatabase) {
     suspend fun delete(item: Note) = db.getNoteDao().deleteNote(item)
     suspend fun update(item: Note) = db.getNoteDao().updateNote(item)
 
-    suspend fun getAllNotes() = db.getNoteDao().getAllNotes()
+    fun getAllNotes() = db.getNoteDao().getAllNotes()
 }
 
 

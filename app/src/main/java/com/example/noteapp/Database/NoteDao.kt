@@ -20,6 +20,6 @@ interface NoteDao {
     suspend fun deleteNote(note: Note)
 
     @Query("SELECT * FROM note")
-    suspend fun getAllNotes(): LiveData<List<Note>>
+    fun getAllNotes(): LiveData<List<Note>>
 
 }
