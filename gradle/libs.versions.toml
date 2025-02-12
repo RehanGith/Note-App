@@ -30,8 +30,10 @@ androidx-lifecyle-viewmodel = {group = "androidx.lifecycle", name = "lifecycle-v
 jetbrains-coroutine-kotlinx = {group = "org.jetbrains.kotlinx", name  = "kotlinx-coroutines-android", version.ref = "coroutine"}
 jetbrains-coroutine-core = {group = "org.jetbrains.kotlinx", name  = "kotlinx-coroutines-core", version.ref = "coroutine"}
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui = { group = "androidx.navigation",name = "navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-ksp = {id = "com.google.devtools.ksp", version.ref= "ksp"}
+android-navigation-safeagrs = {id = "androidx.navigation.safeargs", version.ref = "navigationFragmentKtx"}
 
