@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.noteapp.Database.NoteDatabase
 import com.example.noteapp.Repository.NoteRepo
@@ -26,9 +27,13 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        navController = this.findNavController(R.id.fragmentContainerView)
-        NavigationUI.setupActionBarWithNavController(this, navController)
+
         setUpViewModel()
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navController = navHostFragment.navController
+
+        NavigationUI.setupActionBarWithNavController(this, navController)
+
     }
     private fun setUpViewModel() {
         val repo = NoteRepo(NoteDatabase(this))

@@ -16,8 +16,8 @@ import com.example.noteapp.databinding.FragmentNoteBinding
 class AddNote : Fragment() {
     private lateinit var binding: FragmentNoteBinding
 
-    lateinit var noteViewModel: NoteViewModel
-    lateinit var noteView: View
+    private lateinit var noteViewModel: NoteViewModel
+    private lateinit var noteView: View
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,4 +47,8 @@ class AddNote : Fragment() {
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        saveNote()
+    }
 }
