@@ -23,9 +23,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpViewModel()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView, HomeFragment())
-        transaction.commit()
     }
     private fun setUpViewModel() {
         val repo = NoteRepo(NoteDatabase(this))

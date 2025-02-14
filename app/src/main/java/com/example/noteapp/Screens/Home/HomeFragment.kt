@@ -38,6 +38,7 @@ class HomeFragment : Fragment(), NoteAdapter.OnNoteClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         noteViewModel = (activity as MainActivity).noteViewModel
+        initializeRecyclerView()
         binding.addNoteFab.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_addNote)
         }
