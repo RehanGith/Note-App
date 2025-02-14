@@ -13,7 +13,10 @@
         <action
             android:id="@+id/action_homeFragment_to_editFragment"
             app:destination="@id/editFragment" />
-
+            <argument
+                android:name="note"
+                app:argType="com.example.noteapp.Database.Note"
+                app:nullable="true"/>
         <action
             android:id="@+id/action_homeFragment_to_addNote"
             app:destination="@id/addNote" />
