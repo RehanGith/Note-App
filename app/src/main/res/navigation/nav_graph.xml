@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_homeFragment_to_editFragment"
             app:destination="@id/editFragment" />
+
         <action
             android:id="@+id/action_homeFragment_to_addNote"
             app:destination="@id/addNote" />

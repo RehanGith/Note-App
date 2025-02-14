@@ -31,7 +31,6 @@ class HomeFragment : Fragment(), NoteAdapter.OnNoteClickListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         binding = FragmentHomeBinding.bind(view)
-
         return view
     }
 
@@ -72,6 +71,11 @@ class HomeFragment : Fragment(), NoteAdapter.OnNoteClickListener {
     override fun onDeleteClick(note: Note) {
         showDeleteDialog(note)
     }
+
+    override fun onItemClick(note: Note) {
+        
+    }
+
     private fun showDeleteDialog(note : Note) {
         AlertDialog.Builder(requireContext()).
                 setTitle("Delete Note").

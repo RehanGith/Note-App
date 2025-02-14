@@ -11,12 +11,14 @@ import com.example.noteapp.databinding.NoteLayoutBinding
 class NoteAdapter(private val listener: OnNoteClickListener): RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     interface OnNoteClickListener {
         fun onDeleteClick(note: Note)
+        fun onItemClick(note: Note)
     }
 
     class NoteViewHolder(binding: NoteLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val title = binding.noteTitle
         val content = binding.noteDesc
         val deleteButton = binding.btnDelete
+        val itemView = binding.cdItemView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
@@ -46,6 +48,9 @@ class NoteAdapter(private val listener: OnNoteClickListener): RecyclerView.Adapt
         holder.content.text = currentNote.description
         holder.deleteButton.setOnClickListener {
             listener.onDeleteClick(currentNote)
+        }
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(currentNote)
         }
 
     }
