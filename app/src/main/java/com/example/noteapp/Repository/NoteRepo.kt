@@ -6,7 +6,6 @@ import com.example.noteapp.Database.NoteDatabase
 class NoteRepo(val db: NoteDatabase) {
     suspend fun insert(item: Note) = db.getNoteDao().insertNote(item)
     suspend fun delete(item: Note) = db.getNoteDao().deleteNote(item)
-    suspend fun update(item: Note) = db.getNoteDao().updateNote(item)
 
     fun getAllNotes() = db.getNoteDao().getAllNotes()
 }

@@ -73,7 +73,10 @@ class HomeFragment : Fragment(), NoteAdapter.OnNoteClickListener {
     }
 
     override fun onItemClick(note: Note) {
-        
+        val bundle = Bundle().apply {
+            putParcelable("note", note)
+        }
+        findNavController().navigate(R.id.action_homeFragment_to_editFragment, bundle)
     }
 
     private fun showDeleteDialog(note : Note) {

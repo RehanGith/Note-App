@@ -7,22 +7,22 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Note(
-    val title: String, val description: String,
+    var title: String, var description: String,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString() ?: "",
         parcel.readString() ?: "",
-         parcel.readInt(),
+         parcel.readInt()
     ) {
 
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeInt(id)
         parcel.writeString(title)
         parcel.writeString(description)
+        parcel.writeInt(id)
     }
 
     override fun describeContents(): Int {

@@ -13,9 +13,10 @@ room = "2.6.1"
 ksp = "1.9.20-1.0.13"
 lifecyle = "2.8.7"
 coroutine = "1.7.3"
-navigationFragmentKtx = "2.8.6"
+navigationFragmentKtx = "2.8.7"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationFragmentKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -35,5 +36,5 @@ androidx-navigation-ui = { group = "androidx.navigation",name = "navigation-ui-k
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-ksp = {id = "com.google.devtools.ksp", version.ref= "ksp"}
-android-navigation-safeagrs = {id = "androidx.navigation.safeargs", version.ref = "navigationFragmentKtx"}
+android-navigation-safeargs = {id = "androidx.navigation.safeargs", version.ref = "navigationFragmentKtx"}
 

@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
-    alias(libs.plugins.android.navigation.safeagrs)
+    alias(libs.plugins.android.navigation.safeargs)
 }
 
 android {
@@ -18,7 +18,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -43,6 +42,7 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui)
 

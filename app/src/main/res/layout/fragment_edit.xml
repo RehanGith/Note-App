@@ -11,18 +11,6 @@
         android:padding="12dp"
         tools:context=".Screens.EditNote.EditFragment">
 
-        <TextView
-            android:id="@+id/editNoteHeading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/my_font"
-            android:text="@string/edit_note"
-            android:textStyle="bold"
-            android:textColor="@color/red"
-            android:textSize="24sp" />
-
         <EditText
             android:id="@+id/editNoteTitle"
             android:layout_width="match_parent"
@@ -30,7 +18,6 @@
             android:hint="@string/enter_the_title"
             android:padding="12dp"
             android:textSize="20sp"
-            android:layout_below="@id/editNoteHeading"
             android:background="@drawable/boarder"
             android:layout_marginTop="16dp"
             android:maxLines="1"
